@@ -6,7 +6,9 @@ import TheNavbar from './components/TheNavbar.vue';
 
 <template>
   <the-navbar></the-navbar>
-  <router-view />
+  <div id="view">
+    <router-view />
+  </div>
   <the-footer></the-footer>
 </template>
 
