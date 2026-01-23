@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, $color-bg-primary, rgba(15, 20, 25, 0.95));
+  border-bottom: 1px solid $color-border-light;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  h1 {
+    margin: 0;
+    color: $color-text-primary;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $color-accent-primary;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.8rem;
+
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 0;
+
+      li {
+        padding: 0.5rem 1rem;
+
+        a {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: $color-accent-primary;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #navbar .content {
+    justify-content: space-between;
+  }
+}
