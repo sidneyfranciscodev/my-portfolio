@@ -1,0 +1,141 @@
+@use '../abstracts/variables' as *;
+
+footer,
+footer .top {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  border-top: 2px solid $color-border-medium;
+  background: linear-gradient(to bottom, $color-bg-primary, $color-bg-secondary);
+
+  p { margin: 0; }
+
+  a {
+    color: $color-text-primary;
+    transition: all 0.3s ease;
+
+    &:hover { color: $color-accent-primary; }
+  }
+
+  .top {
+    & > * {
+      padding: 1.2rem 0;
+      margin: 0 1.2rem;
+    }
+
+    .info {
+      padding-top: 2rem;
+
+      h2 { color: $color-text-primary; }
+      p { color: $color-text-secondary; }
+    }
+
+    .social {
+      h3 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: $color-text-primary;
+      }
+
+      .btn {
+        padding: 0.7rem 1rem;
+        margin-right: 0.8rem;
+        margin-bottom: 0.6rem;
+        border: 1px solid $color-border-medium;
+        border-radius: 9px;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-text-secondary;
+        transition: all 0.3s ease;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          border-color: $color-accent-primary;
+          background: $color-accent-primary;
+          color: $color-bg-primary;
+
+          .icon { transform: scale(1.1); }
+        }
+      }
+
+      hr {
+        color: $color-border-light;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid $color-border-light;
+      }
+    }
+  }
+
+  .bottom {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.2rem;
+    margin: 0 1.2rem;
+    font-size: 0.9rem;
+    color: $color-text-secondary;
+
+    a {
+      color: $color-accent-primary;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    .top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 3rem 2rem;
+
+      .social,
+      .info {
+        flex: 1;
+        margin: 0 1.5rem;
+        padding: 0;
+      }
+
+      .social {
+        text-align: right;
+
+        h3 {
+          margin-bottom: 2rem;
+          font-size: 1.2rem;
+        }
+
+        .btn {
+          margin-right: 1rem;
+          margin-bottom: 0.8rem;
+          padding: 0.7rem 1.2rem;
+        }
+      }
+
+      hr { display: none; }
+    }
+
+    .bottom {
+      border-top: 1px solid $color-border-light;
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+      margin: 0 2rem;
+      font-size: 0.95rem;
+    }
+  }
+}
