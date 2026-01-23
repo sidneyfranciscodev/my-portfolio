@@ -1,6 +1,69 @@
-body { margin: 0; }
+@use '../abstracts/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-accent-primary $color-bg-tertiary;
+
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-track { background: $color-bg-tertiary; }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-accent-primary;
+    border-radius: 4px;
+
+    &:hover { background: $color-accent-secondary; }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: $color-bg-primary;
+  color: $color-text-primary;
+}
 
 #view {
   margin-top: 68px;
-  min-height: 100vh;
+  min-height: 95vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: $color-text-primary;
+}
+
+.badge {
+  text-align: center;
+  padding: 0 0 2rem 0;
+  animation: slideDown 0.8s ease-out;
+
+    .content {
+      padding: 0.6rem 1.5rem;
+      border-radius: 100px;
+      border: 1.5px solid $color-border-medium;
+      color: $color-accent-primary;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: rgba(0, 217, 255, 0.05);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $color-accent-primary;
+        background: rgba(0, 217, 255, 0.1);
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      }
+    }
+  }
+
+@media (min-width: 640px) {
+  .badge { padding: 0 0 2.5rem 0; }
+}
+
+@media (min-width: 1024px) {
+  .badge { padding: 0 0 3rem 0; }
 }
