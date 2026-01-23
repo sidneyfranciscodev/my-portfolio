@@ -1,0 +1,10 @@
+@use 'base/globals';
+
+@use 'view/home';
+@use 'view/about';
+@use 'view/contact';
+@use 'view/projects';
+
+@use 'layout/hero';
+@use 'layout/navbar';
+@use 'layout/footer';
