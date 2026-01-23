@@ -1,0 +1,49 @@
+// Color Palette - Dark Professional Theme (Strict)
+// Minimal, focused palette for consistency
+
+// Background Colors
+$color-bg-primary: #0f1419; // Deep charcoal - Main background
+$color-bg-secondary: #1a1f2e; // Elevated surfaces (cards, modals)
+$color-bg-tertiary: #252d3d;     // For cards and elevated elements
+
+
+// Text Colors
+$color-text-primary: #f5f7fa;    // Almost white for readability
+$color-text-secondary: #b4bcc9;  // Muted gray for secondary text
+$color-text-tertiary: #8a94a3;   // Light gray for less important info
+
+
+// Accent Colors - Core brand colors
+$color-accent-primary: #00d9ff; // Cyan - Primary accent
+$color-accent-secondary: #6366f1; // Indigo - Secondary accent
+
+
+// Border Colors
+$color-border-light: rgba(100, 116, 139, 0.2); // Subtle borders
+$color-border-medium: rgba(100, 116, 139, 0.4); // Medium visibility
+$color-border-strong: rgba(100, 116, 139, 0.6); // High visibility
+
+
+// Gradient Combinations
+$gradient-accent: linear-gradient(135deg, #00d9ff, #6366f1);
+$gradient-subtle: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.1));
+
+
+// Semantic Colorsz
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-error: #ef4444;
+
+
+// Interactive States
+$color-hover-increment: rgba(255, 255, 255, 0.08);
+
+
+// Hover/Active States
+$color-hover-increment: rgba(255, 255, 255, 0.05);
+$color-active-increment: rgba(255, 255, 255, 0.1);
+
+
+// Legacy variables (for compatibility)
+$badge: #00d9ff;
+$border: $color-border-light;
