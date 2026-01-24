@@ -1,10 +1,6 @@
 <template>
   <section id="hero">
-    <div class="badge">
-      <div class="content">
-        <span>Open to opportunities</span>
-      </div>
-    </div>
+    <the-badge title="Open to opportunities"></the-badge>
 
     <h1 class="title">
         <span class="gradient">Software Engineer</span>
