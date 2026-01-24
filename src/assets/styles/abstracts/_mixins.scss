@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+// Section heading with gradient (mobile first)
+@mixin section-heading {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: $gradient-accent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Section paragraph text (mobile first)
+@mixin section-paragraph {
+  font-size: 0.95rem;
+  color: $color-text-secondary;
+  line-height: 1.7;
+  max-width: 72rem;
+  margin: 0 auto 2rem auto;
+  font-weight: 400;
+}
+
+// Section list base styles (mobile first)
+@mixin section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  text-align: left;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+// Section list item with optional accent color (mobile first)
+@mixin section-list-item($border-color: $color-accent-primary, $bg-gradient: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.05)), $hover-bg: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(99, 102, 241, 0.1))) {
+  font-size: 0.95rem;
+  color: $color-text-secondary;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid transparent;
+  background: $bg-gradient;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+  &:hover {
+    border-left-color: $border-color;
+    background: $hover-bg;
+    transform: translateX(4px);
+  }
+}
