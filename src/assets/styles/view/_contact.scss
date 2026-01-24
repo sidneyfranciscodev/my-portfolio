@@ -1,70 +1,93 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/animations' as *;
 
 #contact {
-  position: relative;
-  padding: 4rem 1.5rem;
-  text-align: center;
-  background: linear-gradient(135deg, $color-bg-secondary 0%, $color-bg-primary 100%);
-  border-top: 1px solid $color-border-light;
+  main {
+    @include column;
+    padding: 9rem 1.5rem;
 
-  h2 {
-    @include section-heading;
-  }
+    #details {
+      width: 100%;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 56rem;
-    margin: 2rem auto 0;
-
-    li {
-      font-size: 0.95rem;
-      color: $color-text-secondary;
-      padding: 1rem 1.5rem;
-      border: 1px solid $color-border-medium;
-      border-radius: 8px;
-      background: rgba(37, 45, 61, 0.5);
-      transition: all 0.3s ease;
-      font-weight: 500;
-
-      &:hover {
-        border-color: $color-accent-primary;
-        background: rgba(37, 45, 61, 0.8);
-        box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
-        transform: translateX(4px);
+      h2 {
+        @include section-heading;
+        margin-bottom: 2rem;
       }
 
-      a {
-        color: $color-text-primary;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
+      ul {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.8rem;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+        max-width: 100%;
 
-        .icon {
-          width: 24px;
-          height: 24px;
-          flex-shrink: 0;
+        li {
+          font-size: 0.9rem;
+          color: $color-text-secondary;
+          padding: 1.25rem 1.5rem;
+          border: 1px solid $color-border-light;
+          border-radius: 8px;
+          background: $color-bg-secondary;
           transition: all 0.3s ease;
-        }
+          font-weight: 500;
+          animation: fadeInUp 0.8s ease-out;
 
-        span {
-          transition: all 0.3s ease;
-        }
+          &:nth-child(1) {
+            animation-delay: 0.1s;
+          }
 
-        &:hover {
-          color: $color-accent-primary;
+          &:nth-child(2) {
+            animation-delay: 0.2s;
+          }
 
-          .icon {
-            transform: scale(1.1);
+          &:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+
+          &:active {
+            transform: scale(0.98);
+          }
+
+          &:hover {
+            border-color: $color-accent-primary;
+            background: rgba(0, 217, 255, 0.08);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.15);
+            transform: translateY(-2px);
+          }
+
+          a {
+            color: $color-text-primary;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+
+            .icon {
+              width: 20px;
+              height: 20px;
+              flex-shrink: 0;
+              transition: all 0.3s ease;
+            }
+
+            span {
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              color: $color-accent-primary;
+
+              .icon {
+                transform: scale(1.15);
+              }
+            }
           }
         }
       }
@@ -72,28 +95,30 @@
   }
 }
 
-// Tablet breakpoint (768px+)
-@media (min-width: 768px) {
+// Tablet breakpoint (640px+)
+@media (min-width: 640px) {
   #contact {
     main {
-      @include column;
-      padding: 6rem 2rem;
+      padding: 9rem 2rem;
 
-      h2 {
-        @include section-heading;
-      }
+      #details {
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 2.5rem;
+        }
 
-      ul {
-        flex-direction: row;
-        gap: 2rem;
-        justify-content: center;
-        margin-top: 2.5rem;
+        ul {
+          flex-direction: row;
+          gap: 1.5rem;
+          justify-content: center;
+          flex-wrap: wrap;
 
-        li {
-          flex: 1;
-          min-width: 200px;
-          max-width: 280px;
-          font-size: 1rem;
+          li {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+            font-size: 0.95rem;
+          }
         }
       }
     }
@@ -104,18 +129,25 @@
 @media (min-width: 1024px) {
   #contact {
     main {
-      padding: 8rem 3rem;
+      padding: 9rem 3rem;
 
-      h2 {
-        font-size: 3rem;
-      }
+      #details {
+        max-width: 1200px;
 
-      ul {
-        max-width: 70rem;
-        gap: 2.5rem;
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 3rem;
+        }
 
-        li {
-          max-width: none;
+        ul {
+          gap: 2rem;
+          justify-content: center;
+
+          li {
+            max-width: 280px;
+            font-size: 1rem;
+            padding: 1.5rem;
+          }
         }
       }
     }
