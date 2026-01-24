@@ -1,0 +1,212 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/animations' as *;
+
+#projects {
+  .project {
+    padding: 1.5rem 1.25rem;
+    border: 1px solid $color-border-light;
+    border-radius: 8px;
+    background: $color-bg-secondary;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.8s ease-out;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    &:hover {
+      border-color: $color-accent-primary;
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.12);
+      transform: translateY(-3px);
+      background: rgba(0, 217, 255, 0.02);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: $color-text-primary;
+      line-height: 1.3;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: $color-text-secondary;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+      flex-grow: 1;
+    }
+
+    .stack {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      li {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+        background: rgba(0, 217, 255, 0.08);
+        border-radius: 4px;
+        color: $color-accent-primary;
+        font-weight: 500;
+        border: 1px solid $color-border-light;
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+
+        &:hover {
+          background: rgba(0, 217, 255, 0.15);
+          border-color: $color-accent-primary;
+          transform: translateY(-1px);
+        }
+      }
+    }
+
+    .focus {
+      font-size: 0.85rem;
+      color: $color-text-secondary;
+      margin-bottom: 1.25rem;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(0, 217, 255, 0.04));
+      border-left: 3px solid $color-accent-secondary;
+      border-radius: 4px;
+      line-height: 1.5;
+
+      strong {
+        color: $color-accent-secondary;
+        font-weight: 600;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+
+      a {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid $color-border-light;
+        border-radius: 5px;
+        color: $color-text-primary;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+
+        .icon {
+          width: 16px;
+          height: 16px;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          border-color: $color-accent-primary;
+          background: rgba(0, 217, 255, 0.1);
+          color: $color-accent-primary;
+
+          .icon {
+            transform: scale(1.1);
+          }
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+// Tablet breakpoint (640px+)
+@media (min-width: 640px) {
+  #projects {
+    .project {
+      padding: 2rem 1.75rem;
+
+      .title {
+        font-size: 1.25rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .description {
+        font-size: 0.92rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .stack {
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+
+        li {
+          font-size: 0.78rem;
+        }
+      }
+
+      .focus {
+        font-size: 0.88rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .links {
+        gap: 0.85rem;
+      }
+    }
+  }
+}
+
+// Desktop breakpoint (1024px+)
+@media (min-width: 1024px) {
+  #projects {
+    .project {
+      padding: 2.25rem 2rem;
+
+      .title {
+        font-size: 1.35rem;
+      }
+
+      .description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .stack {
+        margin-bottom: 1.5rem;
+      }
+
+      .focus {
+        margin-bottom: 1.5rem;
+      }
+
+      .links {
+        gap: 0.85rem;
+      }
+    }
+  }
+}
