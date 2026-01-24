@@ -1,48 +1,78 @@
+// ===================================
+// BREAKPOINTS
+// ===================================
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 640px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1400px;
+
+// ===================================
+// SPACING SCALE
+// ===================================
+$space-xs: 0.25rem; // 4px
+$space-sm: 0.5rem; // 8px
+$space-md: 1rem; // 16px
+$space-lg: 1.5rem; // 24px
+$space-xl: 2rem; // 32px
+$space-2xl: 2.5rem; // 40px
+$space-3xl: 3rem; // 48px
+$space-4xl: 4rem; // 64px
+
+// ===================================
+// PADDING PRESETS
+// ===================================
+$padding-mobile: $space-xl $space-md; // 2rem 1rem
+$padding-tablet: $space-3xl $space-2xl; // 3rem 2rem
+$padding-desktop: $space-4xl $space-3xl; // 4rem 3rem
+
+// ===================================
+// MARGIN PRESETS
+// ===================================
+$margin-section: $space-lg;
+$margin-heading: $space-2xl;
+$margin-grid-gap-mobile: $space-lg;
+$margin-grid-gap-tablet: $space-2xl;
+$margin-grid-gap-desktop: $space-2xl;
+
+// ===================================
 // Color Palette - Dark Professional Theme (Strict)
 // Minimal, focused palette for consistency
+// ===================================
 
 // Background Colors
 $color-bg-primary: #0f1419; // Deep charcoal - Main background
 $color-bg-secondary: #1a1f2e; // Elevated surfaces (cards, modals)
-$color-bg-tertiary: #252d3d;     // For cards and elevated elements
-
+$color-bg-tertiary: #252d3d; // For cards and elevated elements
 
 // Text Colors
-$color-text-primary: #f5f7fa;    // Almost white for readability
-$color-text-secondary: #b4bcc9;  // Muted gray for secondary text
-$color-text-tertiary: #8a94a3;   // Light gray for less important info
-
+$color-text-primary: #f5f7fa; // Almost white for readability
+$color-text-secondary: #b4bcc9; // Muted gray for secondary text
+$color-text-tertiary: #8a94a3; // Light gray for less important info
 
 // Accent Colors - Core brand colors
 $color-accent-primary: #00d9ff; // Cyan - Primary accent
 $color-accent-secondary: #6366f1; // Indigo - Secondary accent
-
 
 // Border Colors
 $color-border-light: rgba(100, 116, 139, 0.2); // Subtle borders
 $color-border-medium: rgba(100, 116, 139, 0.4); // Medium visibility
 $color-border-strong: rgba(100, 116, 139, 0.6); // High visibility
 
-
 // Gradient Combinations
 $gradient-accent: linear-gradient(135deg, #00d9ff, #6366f1);
 $gradient-subtle: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.1));
 
-
-// Semantic Colorsz
+// Semantic Colors
 $color-success: #10b981;
 $color-warning: #f59e0b;
 $color-error: #ef4444;
 
-
 // Interactive States
 $color-hover-increment: rgba(255, 255, 255, 0.08);
-
 
 // Hover/Active States
 $color-hover-increment: rgba(255, 255, 255, 0.05);
 $color-active-increment: rgba(255, 255, 255, 0.1);
-
 
 // Legacy variables (for compatibility)
 $badge: #00d9ff;

@@ -5,7 +5,7 @@
 #contact {
   main {
     @include column;
-    padding: 6rem 1.5rem;
+    padding: $space-4xl $space-lg;
 
     #details {
       width: 100%;
@@ -14,7 +14,7 @@
 
       h2 {
         @include section-heading;
-        margin-bottom: 2rem;
+        margin-bottom: $space-xl;
       }
 
       ul {
@@ -23,13 +23,13 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        gap: 1rem;
+        gap: $space-md;
         max-width: 100%;
 
         li {
           font-size: 0.9rem;
           color: $color-text-secondary;
-          padding: 1.25rem 1.5rem;
+          padding: $space-lg $space-lg;
           border: 1px solid $color-border-light;
           border-radius: 8px;
           background: $color-bg-secondary;
@@ -37,17 +37,9 @@
           font-weight: 500;
           animation: fadeInUp 0.8s ease-out;
 
-          &:nth-child(1) {
-            animation-delay: 0.1s;
-          }
-
-          &:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-
-          &:nth-child(3) {
-            animation-delay: 0.3s;
-          }
+          &:nth-child(1) { animation-delay: 0.1s; }
+          &:nth-child(2) { animation-delay: 0.2s; }
+          &:nth-child(3) { animation-delay: 0.3s; }
 
           &:active {
             transform: scale(0.98);
@@ -68,7 +60,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.75rem;
+            gap: $space-sm;
 
             .icon {
               width: 20px;
@@ -91,25 +83,16 @@
           }
         }
       }
-    }
-  }
-}
 
-// Tablet breakpoint (640px+)
-@media (min-width: 640px) {
-  #contact {
-    main {
-      padding: 9rem 2rem;
-
-      #details {
+      @include tablet {
         h2 {
           font-size: 2rem;
-          margin-bottom: 2.5rem;
+          margin-bottom: $space-2xl;
         }
 
         ul {
           flex-direction: row;
-          gap: 1.5rem;
+          gap: $space-lg;
           justify-content: center;
           flex-wrap: wrap;
 
@@ -121,35 +104,38 @@
           }
         }
       }
-    }
-  }
-}
 
-// Desktop breakpoint (1024px+)
-@media (min-width: 1024px) {
-  #contact {
-    main {
-      padding: 9rem 3rem;
-
-      #details {
-        max-width: 1200px;
+      @include desktop {
+        max-width: $breakpoint-wide;
 
         h2 {
           font-size: 2.5rem;
-          margin-bottom: 3rem;
+          margin-bottom: $space-3xl;
         }
 
         ul {
-          gap: 2rem;
+          gap: $space-2xl;
           justify-content: center;
 
           li {
             max-width: 280px;
             font-size: 1rem;
-            padding: 1.5rem;
+            padding: $space-lg;
           }
         }
       }
+    }
+  }
+
+  @include tablet {
+    main {
+      padding: $space-4xl $space-2xl;
+    }
+  }
+
+  @include desktop {
+    main {
+      padding: $space-4xl $space-3xl;
     }
   }
 }

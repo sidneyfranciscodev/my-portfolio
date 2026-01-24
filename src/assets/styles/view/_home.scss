@@ -4,20 +4,19 @@
 
 #home {
   #intro {
-    @include column;
-    padding: 9rem 1rem ;
-    animation: fadeInUp 0.8s ease-out;
+    @include section-layout;
+    padding: $space-4xl $space-md;
 
     h2 {
       @include section-heading;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: $space-xl;
       animation: slideDown 0.6s ease-out;
     }
 
     p {
       text-align: center;
-      padding-bottom: 3rem;
+      padding-bottom: $space-3xl;
     }
 
     table {
@@ -36,7 +35,7 @@
       tbody {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: $space-md;
 
         tr {
           display: flex;
@@ -48,21 +47,13 @@
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           animation: fadeInUp 0.8s ease-out;
 
-          &:nth-child(1) {
-            animation-delay: 0.1s;
-          }
-
-          &:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-
-          &:nth-child(3) {
-            animation-delay: 0.3s;
-          }
+          &:nth-child(1) { animation-delay: 0.1s; }
+          &:nth-child(2) { animation-delay: 0.2s; }
+          &:nth-child(3) { animation-delay: 0.3s; }
 
           td {
             display: block;
-            padding: 1.25rem;
+            padding: $space-lg;
             color: $color-text-secondary;
             font-size: 0.9rem;
             line-height: 1.6;
@@ -77,7 +68,7 @@
               font-weight: 700;
               color: $color-accent-primary;
               font-size: 0.8rem;
-              margin-bottom: 0.5rem;
+              margin-bottom: $space-xs;
               text-transform: uppercase;
               letter-spacing: 0.5px;
             }
@@ -102,10 +93,8 @@
         @include section-list-item;
       }
     }
-  }
 
-  @media (min-width: 768px) {
-    #intro {
+    @include tablet {
       table {
         width: 80%;
         background: $color-bg-secondary;
@@ -121,7 +110,7 @@
 
           tr {
             th {
-              padding: 1.5rem;
+              padding: $space-lg;
               text-align: left;
               font-weight: 700;
               color: $color-accent-primary;
@@ -145,17 +134,9 @@
             box-shadow: none;
             animation: none;
 
-            &:nth-child(1) {
-              animation-delay: 0;
-            }
-
-            &:nth-child(2) {
-              animation-delay: 0;
-            }
-
-            &:nth-child(3) {
-              animation-delay: 0;
-            }
+            &:nth-child(1) { animation-delay: 0; }
+            &:nth-child(2) { animation-delay: 0; }
+            &:nth-child(3) { animation-delay: 0; }
 
             &:last-child {
               border-bottom: none;
@@ -168,7 +149,7 @@
 
             td {
               display: table-cell;
-              padding: 2rem 1.5rem;
+              padding: $space-2xl $space-lg;
               color: $color-text-secondary;
               font-size: 0.95rem;
               line-height: 1.7;

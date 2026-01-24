@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 footer,
 footer .top {
@@ -21,12 +22,12 @@ footer {
 
   .top {
     & > * {
-      padding: 1.2rem 0;
-      margin: 0 1.2rem;
+      padding: $space-lg 0;
+      margin: 0 $space-lg;
     }
 
     .info {
-      padding-top: 2rem;
+      padding-top: $space-xl;
 
       h2 { color: $color-text-primary; }
       p { color: $color-text-secondary; }
@@ -35,15 +36,15 @@ footer {
     .social {
       h3 {
         margin-top: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: $space-lg;
         font-size: 1.1rem;
         color: $color-text-primary;
       }
 
       .btn {
-        padding: 0.7rem 1rem;
-        margin-right: 0.8rem;
-        margin-bottom: 0.6rem;
+        padding: $space-xs $space-md;
+        margin-right: $space-sm;
+        margin-bottom: $space-xs;
         border: 1px solid $color-border-medium;
         border-radius: 9px;
         font-size: 0.9rem;
@@ -70,8 +71,8 @@ footer {
 
       hr {
         color: $color-border-light;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-top: $space-lg;
+        margin-bottom: $space-lg;
         border: 1px solid $color-border-light;
       }
     }
@@ -79,9 +80,9 @@ footer {
 
   .bottom {
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 1.2rem;
-    margin: 0 1.2rem;
+    padding-top: $space-xl;
+    padding-bottom: $space-lg;
+    margin: 0 $space-lg;
     font-size: 0.9rem;
     color: $color-text-secondary;
 
@@ -95,20 +96,18 @@ footer {
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-  footer {
+  @include tablet {
     .top {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 3rem 2rem;
+      padding: $space-3xl $space-2xl;
 
       .social,
       .info {
         flex: 1;
-        margin: 0 1.5rem;
+        margin: 0 $space-lg;
         padding: 0;
       }
 
@@ -116,14 +115,14 @@ footer {
         text-align: right;
 
         h3 {
-          margin-bottom: 2rem;
+          margin-bottom: $space-2xl;
           font-size: 1.2rem;
         }
 
         .btn {
-          margin-right: 1rem;
-          margin-bottom: 0.8rem;
-          padding: 0.7rem 1.2rem;
+          margin-right: $space-md;
+          margin-bottom: $space-sm;
+          padding: $space-xs $space-md;
         }
       }
 
@@ -132,9 +131,9 @@ footer {
 
     .bottom {
       border-top: 1px solid $color-border-light;
-      padding-top: 2.5rem;
-      padding-bottom: 2rem;
-      margin: 0 2rem;
+      padding-top: $space-2xl;
+      padding-bottom: $space-xl;
+      margin: 0 $space-2xl;
       font-size: 0.95rem;
     }
   }

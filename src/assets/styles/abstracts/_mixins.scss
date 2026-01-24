@@ -1,5 +1,29 @@
 @use './variables' as *;
 
+// ===================================
+// RESPONSIVE BREAKPOINT MIXINS
+// ===================================
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $breakpoint-wide) {
+    @content;
+  }
+}
+
+// ===================================
+// LAYOUT MIXINS
+// ===================================
 @mixin column {
   display: flex;
   flex-direction: column;
@@ -7,11 +31,47 @@
   align-items: center;
 }
 
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ===================================
+// SECTION LAYOUT MIXIN
+// ===================================
+@mixin section-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+// ===================================
+// CARD/CONTAINER MIXIN
+// ===================================
+@mixin card {
+  border: 1px solid $color-border-light;
+  border-radius: 8px;
+  background: $color-bg-secondary;
+  transition: all 0.3s ease;
+}
+
+// ===================================
+// TYPOGRAPHY MIXINS
+// ===================================
+
 // Section heading with gradient (mobile first)
 @mixin section-heading {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: $space-xl;
   background: $gradient-accent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -24,9 +84,13 @@
   color: $color-text-secondary;
   line-height: 1.7;
   max-width: 72rem;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto $space-xl auto;
   font-weight: 400;
 }
+
+// ===================================
+// LIST MIXINS
+// ===================================
 
 // Section list base styles (mobile first)
 @mixin section-list {
@@ -35,17 +99,21 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: $space-sm;
   text-align: left;
   max-width: 72rem;
   margin: 0 auto;
 }
 
 // Section list item with optional accent color (mobile first)
-@mixin section-list-item($border-color: $color-accent-primary, $bg-gradient: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.05)), $hover-bg: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(99, 102, 241, 0.1))) {
+@mixin section-list-item(
+  $border-color: $color-accent-primary,
+  $bg-gradient: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.05)),
+  $hover-bg: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(99, 102, 241, 0.1))
+) {
   font-size: 0.95rem;
   color: $color-text-secondary;
-  padding: 0.8rem 1rem;
+  padding: $space-sm $space-md;
   border-left: 3px solid transparent;
   background: $bg-gradient;
   border-radius: 4px;
@@ -56,5 +124,86 @@
     border-left-color: $border-color;
     background: $hover-bg;
     transform: translateX(4px);
+  }
+}
+
+// ===================================
+// HOVER STATE MIXINS
+// ===================================
+@mixin hover-lift {
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@mixin hover-accent {
+  &:hover {
+    border-color: $color-accent-primary;
+    color: $color-accent-primary;
+  }
+}
+
+@mixin hover-glow {
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.15);
+  }
+}
+
+// ===================================
+// INTERACTIVE STATE MIXINS
+// ===================================
+@mixin interactive-button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-accent-primary;
+    background: rgba(0, 217, 255, 0.1);
+    color: $color-accent-primary;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// ===================================
+// BADGE/TAG MIXIN
+// ===================================
+@mixin badge {
+  font-size: 0.75rem;
+  padding: $space-xs $space-sm;
+  background: rgba(0, 217, 255, 0.08);
+  border-radius: 4px;
+  color: $color-accent-primary;
+  font-weight: 500;
+  border: 1px solid $color-border-light;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  &:hover {
+    background: rgba(0, 217, 255, 0.15);
+    border-color: $color-accent-primary;
+    transform: translateY(-1px);
+  }
+}
+
+// ===================================
+// GRID RESPONSIVE MIXIN
+// ===================================
+@mixin responsive-grid($mobile-cols: 1, $tablet-cols: 2, $desktop-cols: 3) {
+  display: grid;
+  grid-template-columns: repeat($mobile-cols, 1fr);
+  gap: $margin-grid-gap-mobile;
+
+  @include tablet {
+    grid-template-columns: repeat($tablet-cols, 1fr);
+    gap: $margin-grid-gap-tablet;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat($desktop-cols, 1fr);
+    gap: $margin-grid-gap-desktop;
   }
 }
