@@ -1,0 +1,123 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+#contact {
+  position: relative;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, $color-bg-secondary 0%, $color-bg-primary 100%);
+  border-top: 1px solid $color-border-light;
+
+  h2 {
+    @include section-heading;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 56rem;
+    margin: 2rem auto 0;
+
+    li {
+      font-size: 0.95rem;
+      color: $color-text-secondary;
+      padding: 1rem 1.5rem;
+      border: 1px solid $color-border-medium;
+      border-radius: 8px;
+      background: rgba(37, 45, 61, 0.5);
+      transition: all 0.3s ease;
+      font-weight: 500;
+
+      &:hover {
+        border-color: $color-accent-primary;
+        background: rgba(37, 45, 61, 0.8);
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
+        transform: translateX(4px);
+      }
+
+      a {
+        color: $color-text-primary;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+        }
+
+        span {
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          color: $color-accent-primary;
+
+          .icon {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet breakpoint (768px+)
+@media (min-width: 768px) {
+  #contact {
+    main {
+      @include column;
+      padding: 6rem 2rem;
+
+      h2 {
+        @include section-heading;
+      }
+
+      ul {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2.5rem;
+
+        li {
+          flex: 1;
+          min-width: 200px;
+          max-width: 280px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Desktop breakpoint (1024px+)
+@media (min-width: 1024px) {
+  #contact {
+    main {
+      padding: 8rem 3rem;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      ul {
+        max-width: 70rem;
+        gap: 2.5rem;
+
+        li {
+          max-width: none;
+        }
+      }
+    }
+  }
+}

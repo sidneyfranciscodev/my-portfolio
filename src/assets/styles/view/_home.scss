@@ -4,10 +4,7 @@
 
 #home {
   #intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include column;
     padding: 9rem 1rem ;
     animation: fadeInUp 0.8s ease-out;
 

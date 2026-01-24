@@ -1,5 +1,12 @@
 @use './variables' as *;
 
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 // Section heading with gradient (mobile first)
 @mixin section-heading {
   font-size: 1.8rem;
