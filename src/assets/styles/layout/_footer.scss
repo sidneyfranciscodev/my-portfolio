@@ -11,13 +11,17 @@ footer {
   border-top: 2px solid $color-border-medium;
   background: linear-gradient(to bottom, $color-bg-primary, $color-bg-secondary);
 
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 
   a {
     color: $color-text-primary;
     transition: all 0.3s ease;
 
-    &:hover { color: $color-accent-primary; }
+    &:hover {
+      color: $color-accent-primary;
+    }
   }
 
   .top {
@@ -29,8 +33,12 @@ footer {
     .info {
       padding-top: $space-xl;
 
-      h2 { color: $color-text-primary; }
-      p { color: $color-text-secondary; }
+      h2 {
+        color: $color-text-primary;
+      }
+      p {
+        color: $color-text-secondary;
+      }
     }
 
     .social {
@@ -65,7 +73,9 @@ footer {
           background: $color-accent-primary;
           color: $color-bg-primary;
 
-          .icon { transform: scale(1.1); }
+          .icon {
+            transform: scale(1.1);
+          }
         }
       }
 
@@ -126,7 +136,9 @@ footer {
         }
       }
 
-      hr { display: none; }
+      hr {
+        display: none;
+      }
     }
 
     .bottom {
