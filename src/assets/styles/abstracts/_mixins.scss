@@ -2,6 +2,7 @@
 
 // Section heading with gradient (mobile first)
 @mixin section-heading {
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
   background: $gradient-accent;

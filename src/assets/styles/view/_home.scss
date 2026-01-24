@@ -3,7 +3,6 @@
 @use '../abstracts/animations' as *;
 
 #home {
-
   #intro {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,6 @@
       text-align: center;
       margin-bottom: 2rem;
       animation: slideDown 0.6s ease-out;
-      font-size: 1.8rem;
     }
 
     table {
@@ -89,8 +87,26 @@
           }
         }
       }
+    }
 
-      @media (min-width: 768px) {
+    p {
+      @include section-paragraph;
+    }
+
+    ul {
+      @include section-list;
+
+      li {
+        @include section-list-item;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    #intro {
+      padding: 9rem 1rem;
+
+      table {
         width: 80%;
         background: $color-bg-secondary;
         border: 1px solid $color-border-light;
@@ -165,18 +181,6 @@
             }
           }
         }
-      }
-    }
-
-    p {
-      @include section-paragraph;
-    }
-
-    ul {
-      @include section-list;
-
-      li {
-        @include section-list-item;
       }
     }
   }
