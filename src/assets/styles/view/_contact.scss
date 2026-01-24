@@ -3,6 +3,8 @@
 @use '../abstracts/animations' as *;
 
 #contact {
+  padding-top: 6rem;
+
   main {
     @include column;
     padding: $space-4xl $space-lg;
