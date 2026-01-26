@@ -68,7 +68,7 @@ import TheProject from '@/components/TheProject.vue'
           focus="security boundaries, integrations, maintainability"
           :links="{
             Github: 'https://github.com/sidneyfranciscodev/audio-analysis.git',
-            Live: 'https://audio-analysis-yc5a.onrender.com',
+            Live: 'https://audio-doc-analysis.onrender.com',
           }"
         />
       </div>
