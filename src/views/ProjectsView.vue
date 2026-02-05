@@ -12,7 +12,7 @@ import TheProject from '@/components/TheProject.vue'
 
       <div class="projects-grid">
         <the-project
-          title="ALUCARD — E-commerce Platform"
+          title="ALUCARD — E-commerce Store"
           :stack="[
             'Symfony',
             'Twig',
@@ -36,6 +36,7 @@ import TheProject from '@/components/TheProject.vue'
           title="Direito Moz — Legal Document Generation Platform"
           :stack="[
             'Vue 3',
+            'SCSS',
             'FastAPI',
             'Firebase_admin',
             'Openai API',
@@ -58,8 +59,9 @@ import TheProject from '@/components/TheProject.vue'
           :stack="[
             'FastAPI',
             'Jinja2',
+            'CSS3',
             'Stimulus.js',
-            'Firebase_admin',
+            'Firebase auth',
             'Deepseek R1',
             'Deepseek VL',
             'Docker',
