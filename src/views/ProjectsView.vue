@@ -16,13 +16,14 @@ import TheProject from '@/components/TheProject.vue'
           :stack="[
             'Symfony',
             'Twig',
-            'Stimulus.js',
             'SCSS',
+            'Stimulus.js',
             'EasyAdmin',
             'Stripe',
             'Printful API',
             'Doctrine ORM',
             'PostgreSQL',
+            'Apache',
             'Docker',
           ]"
           description="Alucard is a full e-commerce system designed for a clothing brand, handling authentication, product management, orders, and external fulfillment through Printful. The system focuses on clean backend architecture, admin usability, and reliable third-party API integration."
@@ -35,23 +36,24 @@ import TheProject from '@/components/TheProject.vue'
         <the-project
           title="Direito Moz — Legal Document Generation Platform"
           :stack="[
-            'Vue 3',
-            'SCSS',
-            'FastAPI',
-            'Firebase_admin',
-            'Openai API',
             'Symfony',
-            'Doctrine',
+            'Twig',
+            'SCSS',
+            'Vue.js',
+            'Stimulus.js',
+            'Firebase Auth',
+            'EasyAdmin',
+            'M-pesa API',
+            'Doctrine ORM',
             'PostgreSQL',
-            'Stripe',
-            'Vercel',
+            'Apache',
             'Docker',
           ]"
           description="Direito Moz is SaaS AI-powered legal document generation and assistance platform for legal professionals, enabling structured document generation, AI-assisted drafting, and secure user access. Built with separation of concerns between frontend, API, and AI services."
           focus="product architecture, security, scalability"
           :links="{
-            Github: 'https://github.com/sidneyfranciscodev/frontend_direito_plus.git',
-            Live: 'https://direitomoz.vercel.app/',
+            Github: 'https://github.com/sidneyfranciscodev/direito_moz.git',
+            Live: 'https://direito-moz.onrender.com',
           }"
         />
         <the-project
