@@ -1,11 +1,9 @@
 <template>
   <div id="contact">
-    <header></header>
-
     <main>
       <the-badge title="Reach Me"></the-badge>
       <section id="details">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <ul>
           <li>
             <a href="mailto:sidneyfranciscodev@gmail.com" title="Email">

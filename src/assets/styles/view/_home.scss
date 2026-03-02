@@ -5,7 +5,7 @@
 #home {
   #intro {
     @include section-layout;
-    padding: $space-4xl $space-md;
+    padding: $space-3xl $space-md;
 
     h2 {
       @include section-heading;

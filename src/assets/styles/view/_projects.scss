@@ -4,7 +4,7 @@
 @use '../components/project';
 
 #projects {
-  padding: $padding-mobile;
+  padding: $space-3xl $space-md;
   text-align: center;
   background: transparent;
   border-top: none;

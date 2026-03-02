@@ -3,11 +3,9 @@
 @use '../abstracts/animations' as *;
 
 #contact {
-  padding-top: $space-4xl;
-
   main {
     @include column;
-    padding: $space-4xl $space-lg;
+    padding: $space-3xl $space-lg;
 
     #details {
       width: 100%;

@@ -12,7 +12,11 @@
       type: String,
       required: true
     },
-    focus: {
+    problem: {
+      type: String,
+      required: false
+    },
+    solution: {
       type: String,
       required: false
     },
@@ -30,7 +34,8 @@
     <ul class="stack">
       <li v-for="tech in stack" :key="tech">{{ tech }}</li>
     </ul>
-    <p v-if="focus" class="focus"><strong>Focus:</strong> {{ focus }}</p>
+    <p v-if="problem" class="focus"><strong>problem:</strong> {{ problem }}</p>
+    <p v-if="solution" class="focus"><strong>Outcome:</strong> {{ solution }}</p>
     <div v-if="links && Object.keys(links).length" class="links">
       <a
         v-for="(url, label) in links"

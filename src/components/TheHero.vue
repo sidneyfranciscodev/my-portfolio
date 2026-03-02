@@ -3,9 +3,9 @@
     <the-badge title="Open to opportunities"></the-badge>
 
     <h1 class="title">
-        <span class="gradient">Software Engineer</span>
+        <span class="gradient">Software Engineer | Full-Stack Developer</span>
         <br>
-        <span class="primary">Focused on Clean Architecture, Security, and AI-driven products</span>
+        <span class="primary">Building scalable, containerized web platforms with Vue 3, Symfony 7, FastAPI, and AI Integrations</span>
     </h1>
 
     <p class="subtitle">
