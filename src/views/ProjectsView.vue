@@ -30,7 +30,7 @@ import TheProject from '@/components/TheProject.vue'
           solution="Reduced order processing time by 80%, fully automated checkout & fulfillment workflow"
           :links="{
             Github: 'https://github.com/sidneyfranciscodev/alucard.git',
-            Live: 'https://alucard-wfio.onrender.com',
+            Live: 'https://alucard-cwxa.onrender.com',
           }"
         />
         
