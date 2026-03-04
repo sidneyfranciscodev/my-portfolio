@@ -12,9 +12,14 @@
       text-align: center;
       animation: fadeInUp 0.8s ease-out;
 
-      h2 {
+      h1 {
         @include section-heading;
         margin-bottom: $space-xl;
+      }
+
+      p {
+        @include section-paragraph;
+        margin-bottom: $space-2xl;
       }
 
       ul {
@@ -91,6 +96,8 @@
       }
 
       @include tablet {
+        @include flex-column;
+
         h2 {
           font-size: 2rem;
           margin-bottom: $space-2xl;

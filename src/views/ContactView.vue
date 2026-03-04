@@ -5,7 +5,7 @@
       <section id="details">
         <h1>Contact</h1>
 
-        <p>“I’m open to freelance or full-time collaborations. Reach out via email or LinkedIn to discuss how I can architect your next SaaS project.”</p>
+        <p>I’m open to freelance or full-time collaborations. Reach out via email or LinkedIn to discuss how I can architect your next SaaS project.</p>
         
         <ul>
           <li>
