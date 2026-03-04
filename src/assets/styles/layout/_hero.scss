@@ -21,16 +21,9 @@
   }
 
   .title {
-    font-weight: 700;
-
     .gradient {
       display: block;
-      font-size: 2.3rem;
-      line-height: 1.2;
-      background: $gradient-accent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include section-heading;
       margin-bottom: 0.5rem;
       animation: fadeInUp 0.8s ease-out 0.2s both;
     }
@@ -38,58 +31,39 @@
     .primary {
       display: block;
       font-size: 1.4rem;
-      color: $color-text-secondary;
+      font-weight: 700;
       font-weight: 500;
+      max-width: 28rem;
+      color: $color-text-secondary;
       animation: fadeInUp 0.8s ease-out 0.4s both;
     }
   }
 
   .subtitle {
-    font-size: 1rem;
-    color: $color-text-secondary;
-    max-width: 38rem;
-    line-height: 1.6;
-    font-weight: 400;
+    @include section-paragraph;
     animation: fadeInUp 0.8s ease-out 0.6s both;
   }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media tablet {
   #hero {
-    padding: 0;
-
     .title {
-      .gradient { font-size: 3rem; }
-      .primary { font-size: 1.8rem; }
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      line-height: 1.7;
+      .primary { 
+        font-size: 1.8rem;
+      }
     }
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
+@include desktop {
   #hero {
     .title {
       margin-bottom: 2rem;
-
-      .gradient {
-        font-size: 4.2rem;
-        line-height: 1.1;
-      }
 
       .primary { 
         font-size: 2.4rem;
         max-width: 900px;
       }
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      line-height: 1.75;
-      max-width: 48rem;
     }
   }
 }

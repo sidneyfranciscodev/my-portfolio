@@ -13,38 +13,32 @@ import TheHero from '@/components/TheHero.vue'
 
         <h2>Who I Am</h2>
         <p>
-          I'm a software engineer focused on building secure, maintainable, and well-architected
-          applications. My expertise spans backend and frontend development, who aims on creating
-          systems that are easy to understand and extend over time.
+          I am a backend Engineer focused on REST API architecture, containerized SaaS systems and
+          backend performance optimization. I build production-ready applications using Symfony and
+          FastAPI, with PostgreSQL relational modeling and Docker-based infrastructure. Experienced
+          in secure payment integrations (Stripe), authentication systems and microservice
+          separation. Currently open to international opportunities in Europe, particularly Portugal
+          (CPLP), and remote backend roles. Strong interest in scalable system design, backend
+          security and infrastructure fundamentals.
         </p>
-        <br />
 
         <h2>What I Do</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Architecture</th>
-              <th>Full-Stack Engineering</th>
-              <th>AI Integration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Design backend systems with clear boundaries, security-first thinking, and
-                scalability in mind.
-              </td>
-              <td>
-                Build end-to-end applications using Vue (JavaScript), Symfony (PHP), FastAPI
-                (Python), PostgreSQL, Firebase, and Docker.
-              </td>
-              <td>
-                Apply AI pragmatically — document analysis, audio evaluation, and decision support
-                systems that solve real business problems.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <h3>Architecture</h3>
+        <p>
+          I design backend systems with clear boundaries, security-first thinking, and scalability in
+          mind.
+        </p>
+        <h3>Full-Stack Engineering</h3>
+        <p>
+          I build end-to-end applications using Vue (JavaScript), Symfony (PHP), FastAPI (Python),
+          PostgreSQL, Firebase, and Docker.
+        </p>
+
+        <h3>AI Integration</h3>
+        <p>
+          I apply AI pragmatically — document analysis, audio evaluation, and decision support systems
+          that solve real business problems.
+        </p>
       </section>
     </main>
   </div>

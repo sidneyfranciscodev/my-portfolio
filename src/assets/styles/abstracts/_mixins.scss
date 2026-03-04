@@ -69,23 +69,43 @@
 
 // Section heading with gradient (mobile first)
 @mixin section-heading {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: $space-xl;
+  line-height: 1.2;
   background: $gradient-accent;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 4.2rem;
+    line-height: 1;
+  }
 }
 
 // Section paragraph text (mobile first)
 @mixin section-paragraph {
-  font-size: 0.95rem;
   color: $color-text-secondary;
+  font-size: 1rem;
   line-height: 1.7;
-  max-width: 72rem;
-  margin: 0 auto $space-xl auto;
   font-weight: 400;
+  max-width: 25rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 36rem;
+  }
+
+  @include desktop {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    max-width: 48rem;
+  }
 }
 
 // ===================================
