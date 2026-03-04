@@ -6,21 +6,18 @@
   #intro {
     @include section-layout;
     padding: $space-3xl $space-md;
+    text-align: center;
 
     h2 {
       @include section-heading;
-      text-align: center;
       margin-bottom: $space-xl;
       animation: slideDown 0.6s ease-out;
-
       @include desktop {
         font-size: 3rem;
       }
     }
 
-    p {
-      text-align: center;
-      @include section-paragraph;
-    }
+    h3 { color: $color-accent-primary; }
+    p { @include section-paragraph; }
   }
 }

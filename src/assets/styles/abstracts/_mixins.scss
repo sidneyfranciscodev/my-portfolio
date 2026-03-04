@@ -64,10 +64,9 @@
 }
 
 // ===================================
-// TYPOGRAPHY MIXINS
+// TYPOGRAPHY MIXINS (Mobile first)
 // ===================================
 
-// Section heading with gradient (mobile first)
 @mixin section-heading {
   font-size: 2.3rem;
   font-weight: 700;
@@ -87,7 +86,6 @@
   }
 }
 
-// Section paragraph text (mobile first)
 @mixin section-paragraph {
   color: $color-text-secondary;
   font-size: 1rem;

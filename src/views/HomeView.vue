@@ -21,6 +21,8 @@ import TheHero from '@/components/TheHero.vue'
           (CPLP), and remote backend roles. Strong interest in scalable system design, backend
           security and infrastructure fundamentals.
         </p>
+        
+        <br>
 
         <h2>What I Do</h2>
         <h3>Architecture</h3>
@@ -28,6 +30,7 @@ import TheHero from '@/components/TheHero.vue'
           I design backend systems with clear boundaries, security-first thinking, and scalability in
           mind.
         </p>
+        
         <h3>Full-Stack Engineering</h3>
         <p>
           I build end-to-end applications using Vue (JavaScript), Symfony (PHP), FastAPI (Python),
