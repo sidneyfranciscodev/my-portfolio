@@ -15,6 +15,9 @@
       h1 {
         @include section-heading;
         margin-bottom: $space-xl;
+        @include desktop {
+          font-size: 3.6rem;
+        }
       }
 
       p {

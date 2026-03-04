@@ -9,7 +9,7 @@ import TheProject from '@/components/TheProject.vue'
 
       <h1>Projects</h1>
 
-      <div class="projects-grid">
+      <div class="grid">
         <the-project
           title="ALUCARD — E-commerce Store"
           :stack="[
