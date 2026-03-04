@@ -12,7 +12,7 @@ import TheHero from '@/components/TheHero.vue'
         <the-badge title="Introduction"></the-badge>
 
         <h2>Who I Am</h2>
-        <p>
+        <p class="i-am">
           I am a backend Engineer focused on REST API architecture, containerized SaaS systems and
           backend performance optimization. I build production-ready applications using Symfony and
           FastAPI, with PostgreSQL relational modeling and Docker-based infrastructure. Experienced

@@ -2,7 +2,7 @@
   <div id="about">
     <main>
       <the-badge title="About Me"></the-badge>
-      <section class="intro">
+      <section id="intro">
         <h2>Who I Am</h2>
         <p>
           I’m a software engineer focused on building systems that
@@ -30,7 +30,7 @@
       </section>
 
       <section id="mindset">
-        <h2>My Software Philosophy</h2>
+        <h2>My Philosophy</h2>
         <p>
           I believe in using well-understood technology combined with clear architectural
           principles. My goal is to create systems that other engineers can easily understand,
@@ -45,13 +45,13 @@
         </ul>
       </section>
 
-      <section id="skills">
+      <section id="stack">
         <h2>My Stack</h2>
         <ul>
-          <li><b>Frontend:</b> Vue 3, JavaScript (ES6+), SCSS, Twig, Stimulus.js</li>
-          <li><b>Backend:</b> Symfony 7, FastAPI, REST APIs, AI/ML integration</li>
-          <li><b>Databases:</b> PostgreSQL, Firebase</li>
-          <li><b>DevOps:</b> Docker, Nginx, Linux, Git</li>
+          <li><strong>Frontend:</strong> Vue 3, JavaScript (ES6+), SCSS, Twig, Stimulus.js</li>
+          <li><strong>Backend:</strong> Symfony 7, FastAPI, REST APIs, AI/ML integration</li>
+          <li><strong>Database:</strong> PostgreSQL, Firebase</li>
+          <li><strong>DevOps:</strong> Docker, Nginx, Linux, Git</li>
         </ul>
       </section>
     </main>

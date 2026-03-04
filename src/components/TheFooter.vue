@@ -3,7 +3,7 @@
     <div class="top">
       <div class="info">
         <h2>Sidney Francisco</h2>
-        <p>Software Engineer</p>
+        <p>Backend Engineer</p>
       </div>
       <div class="social">
         <h3>Connect</h3>

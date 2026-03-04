@@ -17,6 +17,10 @@
       }
     }
 
+    .i-am { 
+      @include desktop { max-width: 63rem; }
+    }
+    
     h3 { color: $color-accent-primary; }
     p { @include section-paragraph; }
   }

@@ -6,12 +6,12 @@
   main {
     @include flex-column;
     padding: $space-3xl $space-md;
-    max-width: $breakpoint-wide;
-    margin: 0 auto;
+    text-align: center;
 
-    .intro {
-      width: 100%;
-      text-align: center;
+    #intro,
+    #mindset,
+    #stack {
+      @include flex-column();
       animation: fadeInUp 0.8s ease-out;
       margin-bottom: $space-3xl;
 
@@ -23,9 +23,7 @@
 
       p {
         @include section-paragraph;
-        text-align: left;
         margin-bottom: $space-lg;
-        font-size: 0.9rem;
 
         &:last-of-type {
           margin-bottom: $space-xl;
@@ -34,8 +32,6 @@
 
       ul {
         @include section-list;
-        text-align: left;
-        margin-bottom: 0;
 
         li {
           @include section-list-item(
@@ -70,68 +66,19 @@
       }
     }
 
-    #mindset {
-      width: 100%;
-      text-align: center;
-      padding-top: $space-xl;
-      padding-bottom: $space-4xl;
-      border-top: 1px solid $color-border-light;
-      animation: fadeInUp 1s ease-out;
-
-      h2 {
-        @include section-heading;
-        margin-bottom: $space-xl;
-        animation: slideDown 0.7s ease-out;
-      }
-
-      p {
-        @include section-paragraph;
-        text-align: left;
-        margin-bottom: $space-xl;
-        font-size: 0.9rem;
-      }
-
-      ul {
-        @include section-list;
-        text-align: left;
-
-        li {
-          @include section-list-item(
-            $border-color: $color-accent-primary,
-            $bg-gradient: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.05)),
-            $hover-bg: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(99, 102, 241, 0.1))
-          );
-          animation: fadeInUp 0.8s ease-out;
-
-          &:nth-child(1) {
-            animation-delay: 0.5s;
-          }
-          &:nth-child(2) {
-            animation-delay: 0.55s;
-          }
-          &:nth-child(3) {
-            animation-delay: 0.6s;
-          }
-          &:nth-child(4) {
-            animation-delay: 0.65s;
-          }
-        }
-      }
-    }
-
     @include tablet {
       padding: $space-3xl $space-2xl;
 
-      .intro {
+      #intro,
+      #mindset,
+      #stack {
         margin-bottom: $space-4xl;
 
         h2 {
-          font-size: 2rem;
           margin-bottom: $space-2xl;
         }
 
         p {
-          font-size: 0.95rem;
           max-width: 800px;
           margin-left: auto;
           margin-right: auto;
@@ -143,42 +90,26 @@
         }
       }
 
-      #mindset {
-        padding-top: $space-3xl;
-
-        h2 {
-          font-size: 2rem;
-          margin-bottom: $space-2xl;
-        }
-
-        p {
-          font-size: 0.95rem;
-          max-width: 800px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        ul {
-          grid-template-columns: 1fr 1fr;
-          gap: $space-md;
-        }
+      #stack {
+        text-align: left;
+        ul { display: block; }
       }
     }
 
     @include desktop {
       padding: $space-4xl $space-3xl;
 
-      .intro {
+      #intro,
+      #mindset,
+      #stack {
         margin-bottom: $space-4xl;
 
         h2 {
-          font-size: 2.5rem;
+          font-size: 3rem;
           margin-bottom: $space-3xl;
         }
 
         p {
-          font-size: 1rem;
-          line-height: 1.8;
           max-width: 900px;
           margin-left: auto;
           margin-right: auto;
@@ -191,28 +122,9 @@
         }
       }
 
-      #mindset {
-        padding-top: $space-4xl;
-
-        h2 {
-          font-size: 2.5rem;
-          margin-bottom: $space-3xl;
-        }
-
-        p {
-          font-size: 1rem;
-          line-height: 1.8;
-          max-width: 900px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: $space-3xl;
-        }
-
-        ul {
-          grid-template-columns: repeat(2, 1fr);
-          gap: $space-lg;
-          max-width: 900px;
-        }
+      #stack {
+        text-align: left;
+        ul { display: block; }
       }
     }
   }

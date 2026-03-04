@@ -3,6 +3,13 @@
 // ===================================
 // RESPONSIVE BREAKPOINT MIXINS
 // ===================================
+
+@mixin mobile {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: $breakpoint-tablet) {
     @content;
@@ -64,7 +71,7 @@
 }
 
 // ===================================
-// TYPOGRAPHY MIXINS (Mobile first)
+// TYPOGRAPHY MIXINS (mobile first)
 // ===================================
 
 @mixin section-heading {
@@ -107,23 +114,19 @@
 }
 
 // ===================================
-// LIST MIXINS
+// LIST MIXINS (mobile first)
 // ===================================
 
-// Section list base styles (mobile first)
 @mixin section-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
+  padding: 0;
   gap: $space-sm;
-  text-align: left;
   max-width: 72rem;
   margin: 0 auto;
+  list-style: none;
 }
 
-// Section list item with optional accent color (mobile first)
 @mixin section-list-item(
   $border-color: $color-accent-primary,
   $bg-gradient: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(99, 102, 241, 0.05)),
