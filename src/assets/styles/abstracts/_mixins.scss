@@ -24,7 +24,7 @@
 // ===================================
 // LAYOUT MIXINS
 // ===================================
-@mixin column {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
   justify-content: center;

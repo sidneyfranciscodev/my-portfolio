@@ -4,7 +4,7 @@
 
 #contact {
   main {
-    @include column;
+    @include flex-column;
     padding: $space-3xl $space-lg;
 
     #details {

@@ -11,7 +11,7 @@
   animation: fadeInUp 0.8s ease-out;
 
   main {
-    @include column;
+    @include flex-column;
     max-width: $breakpoint-wide;
     margin: 0 auto;
   }
