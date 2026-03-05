@@ -30,12 +30,17 @@
 <template>
   <div class="project">
     <h3 class="title">{{ title }}</h3>
+
+    <p v-if="problem" class="focus"><strong>problem:</strong> {{ problem }}</p>
+    
     <p class="description">{{ description }}</p>
+
     <ul class="stack">
       <li v-for="tech in stack" :key="tech">{{ tech }}</li>
     </ul>
-    <p v-if="problem" class="focus"><strong>problem:</strong> {{ problem }}</p>
+
     <p v-if="solution" class="focus"><strong>Outcome:</strong> {{ solution }}</p>
+    
     <div v-if="links && Object.keys(links).length" class="links">
       <a
         v-for="(url, label) in links"
