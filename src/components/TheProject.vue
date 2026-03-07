@@ -30,10 +30,10 @@
 <template>
   <div class="project">
     <h3 class="title">{{ title }}</h3>
-
-    <p v-if="problem" class="focus"><strong>problem:</strong> {{ problem }}</p>
     
     <p class="description">{{ description }}</p>
+
+    <p v-if="problem" class="focus"><strong>problem:</strong> {{ problem }}</p>
 
     <ul class="stack">
       <li v-for="tech in stack" :key="tech">{{ tech }}</li>

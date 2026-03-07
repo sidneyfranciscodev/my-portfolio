@@ -4,6 +4,7 @@
       <the-badge title="About Me"></the-badge>
       <section id="intro">
         <h2>Who I Am</h2>
+
         <p>
           I’m a software engineer focused on building systems that
           work in real conditions. I care about architecture,
@@ -46,7 +47,14 @@
       </section>
 
       <section id="stack">
-        <h2>My Stack</h2>
+        <h2>The Stack</h2>
+        <p>
+          My tech stack varies depending on the goals, constraints, and scale of each project.
+          I choose tools based on what best solves the problem, prioritizing performance, maintainability,
+          and long-term scalability rather than blindly follow trends. The technologies below represent
+          the core tools I most frequently work with.
+        </p>
+
         <ul>
           <li><strong>Frontend:</strong> Vue 3, JavaScript (ES6+), SCSS, Twig, Stimulus.js</li>
           <li><strong>Backend:</strong> Symfony 7, FastAPI, REST APIs, AI/ML integration</li>
